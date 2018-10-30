@@ -8,7 +8,7 @@ def crackPassword(cryptPass):
 	for pwds in passwords.readlines():
 		pwds = pwds.strip('\n')
 		cryptPwds = crypt.crypt(pwds, salt)
-		if (cryptPwds == cryptPass)
+		if (cryptPwds == cryptPass):
 			print("Found Password: " + pwds)
 	print("Password not Found")
 	return
@@ -20,7 +20,8 @@ def main():
 		if ":" in line:
 			user = line.split(':')[0]
 			cryptPass = line.split(':')[1].strip(' ')
-			print("Cracking Password For: " + user)
+			print("Cracking password for: " + user)
+			crackPassword(cryptPass)
 
 if __name__ == "__main__":
 	main()
